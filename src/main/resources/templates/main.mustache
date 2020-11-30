@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Rooms</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<br>
+
+<h2>Введіть кількість координат (min: 4)</h2>
+
+<br>
+<div>
+    <form method="post">
+        <input type="text" name="text" placeholder="Введіть у форматі x;y" style="margin: 3px">
+        <button type="submit">Add</button>
+    </form>
+</div>
+
+<br>
+<div>Список кімнат</div>
+
+<form method="post" action="filter">
+    <input type="text" name="filter">
+    <button type="submit">Submit</button>
+</form>
+
+<form method="post" action="deleting">
+    <button type="submit">New room</button>
+</form>
+
+{{#rooms}}
+<div>
+    <b>{{id}}</b>
+    <span>({{text}})</span>
+</div>
+{{/rooms}}
+
+<form method="post" action="verify">
+    <button type="submit">Verify coordinates</button>
+</form>
+
+</body>
+</html>
